@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <div id="poster"></div>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+  
+
+        var queryURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDPANM_Lp4yJ2jWqr-MPK4pAT8HU5VQizA&callback=initMap";
+
+        $.ajax({
+            url: queryURL,
+            method: 'GET',
+            headers:("Access-Control-Origin:*"),
+        }).done(function (location) {
+
+
+
+
+            console.log(location);
+
+    $().ready(function () {
+        var queryURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDPANM_Lp4yJ2jWqr-MPK4pAT8HU5VQizA&callback=initMap&callback=?";
+
+        $.getJSON(queryURL, function (data) {
+        console.log(data)
+        });
+});
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>
